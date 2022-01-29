@@ -1,0 +1,72 @@
+.row {
+  padding-left: 5px;
+  .card-size {
+    width: 15%;
+    padding: 20px 0px 20px 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-left: 11px;
+    .flex {
+      display: flex;
+      width: 63px;
+      font-size: 12px;
+    }
+    .number {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+
+.button {
+  background-color: #254E7F;
+  color: #fff;
+  margin-left: 25px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.table-header {
+  border: 0.5px solid transparent;
+  background: #f3f2f7;
+  color: grey;
+  font-size: 12px;
+}
+
+.text-font {
+  font-size: 13px;
+  color: #000;
+}
+
+.sub-text {
+  font-size: 12px;
+  color: #a3a0a0;
+}
+
+.green {
+  color: #254E7F;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 20px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 25px;
+}
+
+.unpaid {
+  color: red;
+  background-color: #f9eaea;
+}
+
+.pending {
+  color: orange;
+  background-color: #fff4df;
+}
+
+.not-selected {
+  padding: 0 8px;
+}

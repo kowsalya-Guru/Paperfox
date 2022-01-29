@@ -1,0 +1,113 @@
+<div class="content-wrapper container-xxl p-0">
+  <div class="content-body">
+    <!-- content-header component -->
+    <div class="row">
+      <div class="card card-size">
+        <div class="flex">
+          Total Order
+        </div>
+        <div class="number">137</div>
+      </div>
+      <div class="card card-size">
+        <div class="flex">
+          Custom Declared
+        </div>
+        <div class="number">9</div>
+      </div>
+      <div class="card card-size">
+        <div class="flex">
+          In Foreign Warehouse
+        </div>
+        <div class="number">0</div>
+      </div>
+      <div class="card card-size">
+        <div class="flex">
+          In Transit Orders
+        </div>
+        <div class="number">0</div>
+      </div>
+      <div class="card card-size">
+        <div class="flex">
+          Unpaid Order
+        </div>
+        <div class="number">0</div>
+      </div>
+      <div class="card card-size">
+        <div class="flex">
+          Delivered Order
+        </div>
+        <div class="number">0</div>
+      </div>
+    </div>
+
+
+    <!-- Basic Alerts start -->
+    <section id="sample-page">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="m-20">
+              <button type="button" class="btn button">+ Create</button>
+              <div class="card-body pb-1">
+                <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                  <thead>
+                    <tr class="table-header">
+                      <th>Date</th>
+                      <th>TRACKING ID</th>
+                      <th>STORE NAME</th>
+                      <th>CUSTOMER</th>
+                      <th>INVOICE PRICE</th>
+                      <th>
+                    <tr>SHIPPING PAYMENT</tr>
+                    <tr>STATUS</tr>
+                    </th>
+                    <th>
+                      <tr>CUSTOMER</tr>
+                      <tr>STATUS</tr>
+                    </th>
+                    <th>
+                      <tr>PACKAGE</tr>
+                      <tr>STATUS</tr>
+                    </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of tableData">
+                      <td class="text-font">{{data.create_date}}</td>
+                      <td>
+                    <tr class="text-font green">{{data.tracking_no}}</tr>
+                    <tr class="sub-text">{{data.ip_trackingId}}</tr>
+                    </td>
+                    <td>
+                      <tr class="text-font">{{data.storename}}</tr>
+                      <tr class="sub-text">{{data.country}}</tr>
+                    </td>
+                    <td>
+                      <tr class="text-font">{{data.name}}</tr>
+                      <tr class="sub-text">{{data.id_user}}</tr>
+                    </td>
+                    <td class="text-font">{{data.shipping_cost}} / {{data.shipping_cost_manat}}</td>
+                    <td>
+                      <tr class="text-font">{{data.invoice_price}}({{data.converstion_invoice_price}})</tr>
+                      <tr class="chip unpaid text-font">{{data.payment_status}}</tr>
+                    </td>
+                    <td>
+                      <div *ngIf="data.custom_status" class="text-font">{{data.custom_status}}</div>
+                      <div *ngIf="!data.custom_status" class="chip unpaid not-selected text-font">Not Declared</div>
+                    </td>
+                    <td>
+                      <div *ngIf="data.package_status" class="text-font">{{data.package_status}}</div>
+                      <div *ngIf="!data.package_status" class="chip pending text-font">Pending</div>
+                    </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Basic Alerts end -->
+  </div>
+</div>

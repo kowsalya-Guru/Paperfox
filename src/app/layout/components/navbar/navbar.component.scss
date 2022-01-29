@@ -1,0 +1,96 @@
+@import "@core/scss/base/bootstrap-extended/include"; // Bootstrap includes
+@import "@core/scss/base/components/include"; // Components includes
+
+// To open dd on right
+.dropdown-menu-right {
+  right: 0 !important;
+  left: auto !important;
+}
+
+// Cart Touchspin
+.touchspin-cart {
+  .touchspin-wrapper {
+    width: 6.4rem;
+  }
+  &:focus-within {
+    box-shadow: none !important;
+  }
+}
+
+app-navbar-bookmark {
+  display: flex;
+}
+
+// Apply style on window scroll for navbar static type
+.navbar-static-style-on-scroll {
+  background-color: #fff !important;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 0px !important;
+}
+
+// Dark Layout
+.dark-layout {
+  .navbar-container {
+    .search-input {
+      .search-list {
+        li {
+          &.auto-suggestion {
+            &:hover {
+              background-color: $theme-dark-body-bg;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.image {
+  width: 98%;
+}
+.navbar {
+  font-family: Arial;
+  margin-top: 20px;
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .dropdown {
+    float: left;
+    .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #254E7F;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+      .icon {
+        color: #B89649;
+      }
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+}
